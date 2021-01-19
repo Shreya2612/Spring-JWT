@@ -8,6 +8,8 @@ import com.example.springjwt.model.response.UserResponse;
 import com.example.springjwt.repo.UserRepository;
 import com.example.springjwt.utility.Constants;
 import com.example.springjwt.utility.Utilities;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,7 @@ import java.util.Collections;
 
 @Service
 public class UserServiceImpl implements UserService {
+    private static final Logger LOG = LoggerFactory.getLogger(UserServiceImpl.class);  //for logger
 
     @Autowired
     private UserRepository userRepository;
